@@ -9,7 +9,8 @@ class NotesController < ApplicationController
 	end
 
 	def create
-		@note = Note.new(note_params)
+		tags = params[:tags][:ids].reject(&:blank?).map(&:to_i)
+		@note = Note.new(note_params.merge(tag_ids: tags))
 		if @note.save
       		redirect_to notes_path
 	    else
@@ -24,6 +25,6 @@ class NotesController < ApplicationController
 	private
 
 	def note_params
-		params.require(:note).permit(:title, :body, :tag_ids,:user_id)
+		params.require(:note).permit(:title, :body, :tags,:user_id)
 	end
 end
