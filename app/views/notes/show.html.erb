@@ -1,0 +1,7 @@
+<div class = 'col-md-8 offset-2'>
+  <h1><%=@note.title%></h1>
+  <p><%=@note.body%></p>
+  <p><small>Tag: <%= raw @note.tags.map(&:name).join(',') %></small></p>
+</div>
+
+<a href="<%= notes_path%>">Back</a>

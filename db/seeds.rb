@@ -1,0 +1,7 @@
+user = User.create(name: "Joseph", email: "joseph@test.com")
+Tag.create(name: "Personal")
+Tag.create(name: "Test")
+Tag.create(name: "Quick")
+Tag.create(name: "NeedsAttention")
+Tag.create(name: "Dependant")
+Tag.create(name: "Immediate")

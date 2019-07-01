@@ -1,0 +1,39 @@
+<h1>User Notes</h1>
+<% if @user_notes.empty? %>
+  <span class="text-warning">There are no tasks!</span>
+  <button><a href="<%=new_note_path%>">New Note</a></button>
+<% else %>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Tag</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user_notes.each do |note| %>
+        <tr>
+          <td>
+            <strong>
+              <%= note.title %>
+            </strong>
+          </td>
+          <td class="text-info">
+            <%= note.body %>
+          </td>
+          <td class="text-info">
+            <%= note.tags.map(&:name).join(',') %>
+          </td>
+          <td>
+            <%= link_to note_path(note) do %>
+              <i>View</i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button><a href="<%=new_note_path%>">New Note</a></button>
+<% end %>
