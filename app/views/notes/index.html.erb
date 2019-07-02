@@ -27,7 +27,7 @@
             <%= note.tags.map(&:name).join(',') %>
           </td>
           <td>
-            <%= link_to note_path(note) do %>
+            <%= link_to note_path(note), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window' } do %>
               <i>View</i>
             <% end %>
           </td>
@@ -35,5 +35,5 @@
       <% end %>
     </tbody>
   </table>
-  <button><a href="<%=new_note_path%>">New Note</a></button>
 <% end %>
+<a href="<%=new_note_path%>"><button class='btn btn-lg btn-primary'>New Note</button></a>
