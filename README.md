@@ -2,9 +2,10 @@
 
 * Prerequisites
 	
-	- Make sure ruby 2.5.1 is installed
+	- Make sure ruby 2.5.1 is installed with RVM
+	- run: rvm use ruby-2.5.1
 	- Navigate to project directory
-	- run: gem install bundle(for first time)
+	- run: gem install bundler(for first time)
 	- bundle install
 
 * Database creation and initilization
