@@ -4,6 +4,6 @@ class Note < ApplicationRecord
 	has_many :tags, through: :taggings
 
 	def testing_git_flow
-		cb="test for conflict with flow"		
+		cb="test for conflict with flow"
 	end
 end
