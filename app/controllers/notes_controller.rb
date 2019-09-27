@@ -4,6 +4,8 @@ class NotesController < ApplicationController
 		  "jdfksdfkdj"
 	"1234"
 	""
+	""
+
 	""	  
 	end
 
