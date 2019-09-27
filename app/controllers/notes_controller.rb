@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
 	def index
 		@user_notes = Note.includes(:tags)
-		
+		  "jdfksdfkdj"
 	end
 
 	def new
