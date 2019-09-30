@@ -24,6 +24,9 @@ class NotesController < ApplicationController
     @note = Note.includes(:tags).where('notes.id = ?', params[:id]).first
   end
 
+  def edit
+  end
+
   private
 
   def note_params
