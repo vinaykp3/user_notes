@@ -18,6 +18,9 @@ class NotesController < ApplicationController
 	    end
 	end
 
+  def edit
+  end
+
 	def show
 		@note = Note.includes(:tags).where("notes.id = ?", params[:id]).first
 	end
